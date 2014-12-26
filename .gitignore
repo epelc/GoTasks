@@ -1,0 +1,10 @@
+.sass-cache
+node_modules
+dist
+bower
+bower_components
+web/scss/material
+*.dmp
+*.out
+*.log
+*.TMP

@@ -1,0 +1,26 @@
+{
+    "name": "go-material",
+    "version": "0.1.0",
+    "description": "An example of using angular-material along with webpack, sass, and a simple golang server",
+    "devDependencies": {
+        "css-loader": "^0.7.0",
+        "exports-loader": "^0.6.2",
+        "file-loader": "^0.5.1",
+        "gulp": "^3.8.9",
+        "gulp-html-minifier": "^0.1.6",
+        "gulp-if": "^1.2.5",
+        "gulp-minify-css": "^0.3.4",
+        "gulp-rename": "^1.2.0",
+        "gulp-ruby-sass": "^0.7.1",
+        "gulp-util": "^3.0.1",
+        "gulp-webpack": "^0.1.0",
+        "ng-annotate-webpack-plugin": "^0.1.2",
+        "path": "^0.4.9",
+        "style-loader": "^0.6.4",
+        "url-loader": "^0.5.5",
+        "webpack": "^1.3.1-beta7",
+        "webpack-core": "^0.3.5",
+        "yargs": "^1.3.3"
+    },
+    "author": "Ed Pelc"
+}

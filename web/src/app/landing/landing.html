@@ -1,0 +1,97 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h1 flex>
+            <a ui-sref="home">Go-Material</a>
+        </h1>
+        <md-button class="md-accent md-raised">Button</md-button>
+    </div>
+</md-toolbar>
+<md-content>
+    <div ui-view>
+        <div class="jumbotron">
+            <div class="landing-content">
+                <h1>Welcome</h1>
+                <p>Please refer to the <a href="https://material.angularjs.org/" target="_blank">angular-material docs</a> to find out how to use their elements. This is still a WIP and is meant to be a real world example however right now it resembles a kitchen sink example.</p>
+            </div>
+        </div>
+        <md-card class="landing-content">
+            <h2>Forms</h2>
+            <form ng-submit="inspectPerson()">
+                <div layout="row" layout-align="space-around">
+                    <div layout="column">
+                        <md-text-float ng-model="person.FirstName" label="First name"></md-text-float>
+                        <md-text-float ng-model="person.LastName" label="Last name"></md-text-float>
+                        <p>
+                            Favorite Fruit: <b ng-bind="person.FavoriteFruit" class="fruit"></b>
+                        </p>
+                        <md-radio-group ng-model="person.FavoriteFruit" label="Favorite Fruit">
+                            <md-radio-button value="Apple" aria-label="Label 1">Apple</md-radio-button>
+                            <md-radio-button value="Banana"> Banana </md-radio-button>
+                            <md-radio-button value="Mango" aria-label="Label 3">Mango</md-radio-button>
+                        </md-radio-group>
+                    </div>
+                    <div layout="column">
+                        <md-text-float ng-model="person.Email" type="email" label="Email"></md-text-float>
+                        <md-text-float ng-model="person.Password" type="password" label="Password"></md-text-float>
+                        <md-checkbox ng-model="person.Accept" aria-label="Accept things?">Accept?</md-checkbox>
+                    </div>
+                </div>
+                <div layout="row" layout-align="center">
+                    <md-button type="submit">Submit</md-button>
+                </div>
+            </form>
+        </md-card>
+        <div class="landing-content">
+            <h2>We are making progress</h2>
+            <div layout="column" layout-align="center center">
+                <div layout="row">
+                    <md-progress-circular md-mode="indeterminate" layout-margin></md-progress-circular>
+                </div>
+                <div layout="row">
+                    <md-progress-circular md-mode="indeterminate" class="md-accent" layout-margin></md-progress-circular>
+                    <md-progress-circular md-mode="indeterminate" class="md-accent md-hue-1" layout-margin></md-progress-circular>
+                    <md-progress-circular md-mode="indeterminate" class="md-accent md-hue-2" layout-margin></md-progress-circular>
+                    <md-progress-circular md-mode="indeterminate" class="md-accent md-hue-3" layout-margin></md-progress-circular>
+                </div>
+                <div layout="row">
+                    <md-progress-circular md-mode="indeterminate" class="md-hue-1" layout-margin></md-progress-circular>
+                    <md-progress-circular md-mode="indeterminate" class="md-hue-2" layout-margin></md-progress-circular>
+                    <md-progress-circular md-mode="indeterminate" class="md-hue-3" layout-margin></md-progress-circular>
+                </div>
+                <md-progress-linear md-mode="indeterminate" layout-margin></md-progress-linear>
+            </div>
+        </div>
+        <div class="landing-content">
+            <h2>Switches</h2>
+            <md-switch>Switch</md-switch>
+            <md-switch>Switch</md-switch>
+            <md-switch>Switch</md-switch>
+            <md-switch>Switch</md-switch>
+            <h2>Slider</h2>
+            <md-slider min="5" max="500"></md-slider>
+            <h2>Tooltips</h2>
+            <span>Hover over me!
+                <md-tooltip>Your tooltip here!</md-tooltip>
+            </span>
+        </div>
+    </div>
+    <footer class="landing-content" layout="row" layout-align="space-between" layout-wrap>
+        <div layout="column">
+            <b>Product</b>
+            <a ui-sref="home.about">About us</a>
+        </div>
+        <div layout="column">
+            <b>Support</b>
+            <a href="mailto:support@yourcompany.com">Contact us</a>
+        </div>
+        <div layout="column">
+            <b>Legal</b>
+            <a ui-sref="home.legal.tos">Terms of service</a>
+            <a ui-sref="home.legal.privacy">Privacy policy</a>
+        </div>
+        <small>© Your Comapny 2014</small>
+    </footer>
+</md-content>
+<md-button class="md-primary md-fab md-fab-bottom-right" ui-sref="home" aria-label="Home">
+    <i class="fa fa-home"></i>
+</md-button>

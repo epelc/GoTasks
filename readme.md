@@ -1,4 +1,4 @@
-# Go-Material
+# GoTasks
 This is a simple example of using `angular-material` since so many people have been asking for one lately. It uses golang for a backend fileserver however this can be switched out with anything. As long as you follow the same method of serving files.
 
 >This project is currently in the process of becoming a hopefully full featured todo app. Since I'm quite tired of keeping track of things in a random file and I'd thought it'd be a good example + I'd get some use out of it which means I'll work on it more. The goal is that it will serve as a real world example app which you may even want to use yourself.

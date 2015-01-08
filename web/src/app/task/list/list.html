@@ -1,0 +1,20 @@
+<div layout="row" layout-align="center">
+    <md-card flex flex-md="80" flex-gt-md="66">
+        <md-list>
+            <md-item ng-repeat="task in Tasks" ng-class="{complete: task.Complete}">
+                <md-item-content>
+                    <div class="md-tile-left">
+                        <md-checkbox ng-model="task.Complete"></md-checkbox>
+                    </div>
+                    <div class="md-tile-content">
+                        <h3 ng-bind="task.Title"></h3>
+                        <p ng-bind="task.Description"></p>
+                    </div>
+                </md-item-content>
+            </md-item>
+        </md-list>
+    </md-card>
+</div>
+<md-button class="md-primary md-fab md-fab-bottom-right" ng-click="addTask()" aria-label="Add task">
+    <i class="fa fa-plus"></i>
+</md-button>

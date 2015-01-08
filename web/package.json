@@ -1,6 +1,6 @@
 {
     "name": "go-material",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "An example of using angular-material along with webpack, sass, and a simple golang server",
     "devDependencies": {
         "css-loader": "^0.7.0",

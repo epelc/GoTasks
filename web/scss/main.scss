@@ -3,3 +3,16 @@
 // Your styles here
 // Add partial files(prefix filename with _) if you want to seperate things
 @import "_landing";
+@import "_breadcrumb";
+
+.complete {
+    color: grey !important;
+}
+
+md-content {
+    background-color: rgb(242, 242, 242) !important;
+}
+
+md-card {
+    background-color: white;
+}

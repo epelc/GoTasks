@@ -3,6 +3,12 @@ This is a simple example of using `angular-material` since so many people have b
 
 >This project is currently in the process of becoming a hopefully full featured todo app. Since I'm quite tired of keeping track of things in a random file and I'd thought it'd be a good example + I'd get some use out of it which means I'll work on it more. The goal is that it will serve as a real world example app which you may even want to use yourself.
 
+### Goals of this project
+- Remain small and focused
+- Learn how to write angularjs tests
+- Learn how to use css animations like a pro
+- Experiment with new organization tecniques
+
 ### What you need
 You will need afew things to get up and running but I'm starting to use vagrant on another project so should be alot simpler soon.
 

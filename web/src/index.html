@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Go Material | Learn the basics</title>
+    <title>GoTasks | Keep track of your tasks</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
     <!-- Use font awesome until material icons is easier to use. Track the following issue for more info
@@ -21,10 +21,17 @@
 
 </head>
 
-<!-- We use this index file as a base since we found that in production it is nice to give your webapp a seperate parent route -->
+<body layout="column">
+    <div layout="column" flex>
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <div ncy-breadcrumb flex></div>
+                <span ng-bind-template="Version: {{BUILDINFO.version}}"></span>
+            </div>
 
-<body layout="column" ui-view>
-
+        </md-toolbar>
+        <md-content ui-view layout="column" flex></md-content>
+    </div>
 </body>
 
 </html>

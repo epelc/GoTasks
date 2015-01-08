@@ -9,16 +9,21 @@ require('material')
 
 // angular imports
 require('angular-ui-router/release/angular-ui-router')
+require('angular-breadcrumb/dist/angular-breadcrumb')
 
+require('app/task/taskServices')
 
 
 var asc = angular.module('gomat', [
     'ngAnimate',
     'ui.router',
     'ngMaterial',
+    'ncy-angular-breadcrumb',
+    'asc.taskControllers',
+    'asc.taskServices'
 ])
 
-asc.config(function($locationProvider, $urlRouterProvider, $stateProvider, $mdThemingProvider) {
+asc.config(function($locationProvider, $urlRouterProvider, $stateProvider, $mdThemingProvider, $breadcrumbProvider) {
     $mdThemingProvider.theme('default')
         .primaryColor('indigo')
         .accentColor('light-blue')
@@ -26,38 +31,18 @@ asc.config(function($locationProvider, $urlRouterProvider, $stateProvider, $mdTh
     $locationProvider.html5Mode(true)
     $urlRouterProvider.otherwise("/")
 
-    $stateProvider
-    // landing page
-    // sends you to the app if your already logged in
-        .state('home', {
-            url: '/',
-            templateUrl: '/app/landing/landing.html',
-            controller: function($scope, $mdToast) {
-                $scope.person = {}
-                $scope.inspectPerson = function() {
-                    $mdToast.show($mdToast.simple()
-                        .content('Thank you for your submission.'))
-                }
-            }
-        })
-        // Some generl legal/about us pages
-        .state('home.legal', {
-            url: 'legal',
-            abstract: true,
-            template: '<h1>Legal</h1><div ui-view></div>'
-        })
-        .state('home.legal.tos', {
-            url: '/tos',
-            templateUrl: '/app/landing/legal/tos.html'
-        })
-        .state('home.legal.privacy', {
-            url: '/privacy',
-            templateUrl: '/app/landing/legal/privacy.html'
-        })
-        .state('home.about', {
-            url: 'about',
-            templateUrl: '/app/landing/about.html'
-        })
+    // $stateProvider
+    //     .state('app', {
+    //         url: '/',
+    //         abstract: true,
+    //         ncyBreadcrumb: {
+    //             label: 'Gomado'
+    //         }
+    //     })
+
+    $breadcrumbProvider.setOptions({
+        templateUrl: '/app/material-breadcrumbs.html'
+    })
 })
 
 asc.run(function($rootScope) {
@@ -66,15 +51,4 @@ asc.run(function($rootScope) {
         version: VERSION,
         devMode: DEVMODE
     }
-})
-
-asc.controller('menuCtrl', function($scope, $q, $mdSidenav, $state) {
-
-    $scope.toggleMenu = function() {
-        $mdSidenav('left').toggle()
-    }
-
-    $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-        $mdSidenav('left').close()
-    })
 })
